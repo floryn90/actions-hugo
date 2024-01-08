@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/klakegg/actions-hugo.git"
+    "url": "git+https://github.com/floryn90/actions-hugo.git"
   },
   "author": "Erlend Klakegg Bergheim",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/klakegg/actions-hugo/issues"
+    "url": "https://github.com/floryn90/actions-hugo/issues"
   },
-  "homepage": "https://github.com/klakegg/actions-hugo#readme",
+  "homepage": "https://github.com/floryn90/actions-hugo#readme",
   "dependencies": {
     "@actions/core": "^1.0.0"
   }

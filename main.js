@@ -20,14 +20,14 @@ function docker(cmd) {
 
 // Generate label
 const label = (core.getInput('version') == '' ? '' : `${core.getInput('version')}-`) + core.getInput('image');
-console.log(`Using klakegg/hugo:${label}`);
+console.log(`Using floryn90/hugo:${label}`);
 
 // Prepare command
 const command = core.getInput('command') == '' ? [] :
 core.getInput('command').split(' ');
 
 // Pull image
-docker(['pull', `klakegg/hugo:${label}`]);
+docker(['pull', `floryn90/hugo:${label}`]);
 
 // Run build
 docker(['run', '--rm' , '-i',
@@ -35,5 +35,5 @@ docker(['run', '--rm' , '-i',
   '-v', `${process.env.GITHUB_WORKSPACE}/${core.getInput('target')}:/target`,
   '-e', `HUGO_ENV=${core.getInput('env')}`,
   '-e', `HUGO_PANDOC=${core.getInput('pandoc_command')}`,
-  `klakegg/hugo:${label}`]
+  `floryn90/hugo:${label}`]
   .concat(command));

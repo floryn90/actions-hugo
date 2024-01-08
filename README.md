@@ -1,6 +1,6 @@
 # Hugo Action
 
-Easy to use action to build your Hugo homepage using the [klakegg/hugo Docker images](https://hub.docker.com/r/klakegg/hugo) made available.
+Easy to use action to build your Hugo homepage using the [floryn90/hugo Docker images](https://hub.docker.com/r/floryn90/hugo) made available.
 
 
 ## Getting started
@@ -20,12 +20,12 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
     - name: hugo
-      uses: klakegg/actions-hugo@1.0.0
+      uses: floryn90/actions-hugo@1.0.0
 ```
 
 More advanced workflow example using matrix with multiple versions and image types:
@@ -46,12 +46,12 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         fetch-depth: 0
 
     - name: hugo
-      uses: klakegg/actions-hugo@1.0.0
+      uses: floryn90/actions-hugo@1.0.0
       with:
         version: ${{ matrix.version }}
         image: ${{ matrix.image }}
@@ -62,7 +62,7 @@ jobs:
 
 **version** - Sets the version of Hugo to be used during build. Defaults to *blank* when not set, resulting in using the very latest version.
 
-**image** - Sets the image type used. Defaults to `busybox` when not set. The following are available for most versions (`ext` indicate [extended edition](https://github.com/klakegg/docker-hugo/blob/master/README.md#hugo-extended-edition)):
+**image** - Sets the image type used. Defaults to `busybox` when not set. The following are available for most versions (`ext` indicate [extended edition](https://github.com/floryn90/docker-hugo/blob/master/README.md#hugo-extended-edition)):
 
 * busybox
 * alpine
@@ -78,7 +78,7 @@ jobs:
 
 **command** - Sets the command to be used. Defaults to *blank*. When set is normal Hugo commands used, however `hugo` is skipped.
 
-**pandoc_command** - Sets the Pandoc command used. Defaults to `pandoc-default`. See use of [Pandoc with Hugo](https://github.com/klakegg/docker-hugo#using-pandoc) for more information.
+**pandoc_command** - Sets the Pandoc command used. Defaults to `pandoc-default`. See use of [Pandoc with Hugo](https://github.com/floryn90/docker-hugo#using-pandoc) for more information.
 
 **env** - Sets the Hugo environemt. Defaults to `DEV`. Possible values:
 
