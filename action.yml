@@ -29,5 +29,5 @@ inputs:
     default: 'DEV'
 
 runs:
-  using: 'node12'
+  using: 'node22'
   main: 'main.js'
