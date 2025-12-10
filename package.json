@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/floryn90/actions-hugo#readme",
   "dependencies": {
-    "@actions/core": "^1.11.1"
+    "@actions/core": "^2.0.0"
   }
 }
