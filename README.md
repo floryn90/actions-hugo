@@ -25,7 +25,7 @@ jobs:
         fetch-depth: 0
 
     - name: hugo
-      uses: floryn90/actions-hugo@1.0.0
+      uses: floryn90/actions-hugo@1.3.2
 ```
 
 More advanced workflow example using matrix with multiple versions and image types:
@@ -51,7 +51,7 @@ jobs:
         fetch-depth: 0
 
     - name: hugo
-      uses: floryn90/actions-hugo@1.0.0
+      uses: floryn90/actions-hugo@1.3.2
       with:
         version: ${{ matrix.version }}
         image: ${{ matrix.image }}
